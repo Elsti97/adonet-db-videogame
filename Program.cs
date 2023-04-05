@@ -2,7 +2,7 @@
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using adonet_db_videogame;
 
-const string connStr = "Data Source = localhost; Initial Catalog = db - videogames; Integrated Security = True";
+const string connStr = "Data Source = localhost; Initial Catalog = db-videogames; Integrated Security = True";
 var repo = new VideogameManager(connStr);
 
 bool exit = false;
