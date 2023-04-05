@@ -85,10 +85,20 @@ void RicercaNome()
         return;
     }
 
-    var vg = repo.GetByName(name);
+    var videogames = repo.GetByName(name);
 
-    if (vg is null) Console.WriteLine("Videogame non trovato");
-    else Console.WriteLine("Videogame trovato: " + vg.ToString());
+    if (videogames.Count == 0)
+    {
+        Console.WriteLine("Videogame non trovato");
+    }
+    else
+    {
+        Console.WriteLine($"Trovati {videogames.Count} videogiochi:");
+        foreach (var videogame in videogames)
+        {
+            Console.WriteLine(videogame.ToString());
+        }
+    }
 }
 
 void Elimina()
